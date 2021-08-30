@@ -1,0 +1,74 @@
+package entities;
+
+import java.sql.Date;
+
+
+public class Product {
+	
+	private long id;
+	
+	private String name;
+
+	private int quantity;
+	
+	private double price;
+	
+	private Date manfDate;
+	
+	public Product() {}
+	
+	public Product( String name, int d, double price, Date date) {
+		this.name = name;
+		this.quantity = d;
+		this.price = price;
+		this.manfDate = date;
+	}
+	public long getId() {
+		return id;
+	}
+	public void setId(long id) {
+		this.id = id;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public int getQuantity() {
+		return quantity;
+	}
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
+	}
+	public double getPrice() {
+		return price;
+	}
+	public void setPrice(double price) {
+		this.price = price;
+	}
+	public Date getManfDate() {
+		return manfDate;
+	}
+	public void setManfDate(Date manfDate) {
+		this.manfDate = manfDate;
+	}
+
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("Product [id=");
+		builder.append(id);
+		builder.append(", name=");
+		builder.append(name);
+		builder.append(", quantity=");
+		builder.append(quantity);
+		builder.append(", price=");
+		builder.append(price);
+		builder.append(", manfDate=");
+		builder.append(manfDate);
+		builder.append("]");
+		return builder.toString();
+	}
+	
+}
